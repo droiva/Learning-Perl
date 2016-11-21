@@ -4,10 +4,12 @@ use Scalar::Util qw(looks_like_number);
 
 #my $x = 600851475143;
 # maximo comun divisor nunca va a ser mayor a raiz cuadrada del numero en cuestion
-my $x;
+
 print "Bienvenido al modulo creado por droiva para hallar el maximo comun divisor de un numero\n Introduzca por favor el numero problema:\n";
+my $x;
+
 while (1) {
-    my $x = <STDIN>;
+    $x = <STDIN>;
     chomp $x;
     if (looks_like_number ($x)) {
         last;
@@ -15,7 +17,7 @@ while (1) {
         print "Perdon, no te he entendido, vuelve a escribirlo\n";
     }
 }
-#Este while anterior me falla. Necesito tu sabio consejo. El valor de x no se me guarda al salir del loop, don't know why
+
 maxcomdiv($x);
 
 sub maxcomdiv {
